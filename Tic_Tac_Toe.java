@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Tic_Tac_Toe{
 	static void EmptyBorad(){
 		//Add : Create a board array
-		int BoardSize=10;
-		char []board=new char[BoardSize];
-		for(int i=1;i<BoardSize;i++){
+		int boardSize=10;
+		char []board=new char[boardSize];
+		for(int i=1;i<boardSize;i++){
 			board[i]=' ';
 		}
 	}
@@ -14,14 +14,17 @@ public class Tic_Tac_Toe{
 		Scanner MyObj = new Scanner(System.in);
 		while(true){
 			System.out.println("Choose the latter X or O");
-			String UserLatter = MyObj.nextLine();
-			if (UserLatter.equals("X")||UserLatter.equals("x")){
-				String ComputerLatter="O";
+			String userLetter = MyObj.nextLine();
+			if (userLetter.equals("X")||userLetter.equals("x")){
+				String computerLatter="O";
 				break;
 			}
-			else if(UserLatter.equals("O")||UserLatter.equals("o")){
-				String ComputerLatter="X";
+			else if(userLetter.equals("O")||userLetter.equals("o")){
+				String computerLatter="X";
 				break;
+			}
+			else{
+				System.out.println("Invalid Letter");
 			}
 		}
 		
