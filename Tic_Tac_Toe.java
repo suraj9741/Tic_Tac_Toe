@@ -2,14 +2,14 @@ import java.util.*;
 import java.util.Scanner;
 public class Tic_Tac_Toe{
 	static void EmptyBorad(){
-		//Add : Create a board array
+		//UC 1 Add : Create a board array
 		int boardSize=10;
 		char []board=new char[boardSize];
 		for(int i=1;i<boardSize;i++){
 			board[i]=' ';
 		}
 	}
-	//Add : function for choose latter for user
+	//UC 2 Add : function for choose latter for user
 	static void ChooseLetter(){	
 		Scanner MyObj = new Scanner(System.in);
 		while(true){
@@ -28,6 +28,7 @@ public class Tic_Tac_Toe{
 			}
 		}
 	}
+	//UC 3 Add : function to create game board
 	static void GameBoard(){
 		char [][] gameBoard ={{' ','|',' ','|',' '},
 							  {'-','+','-','+','-'},
