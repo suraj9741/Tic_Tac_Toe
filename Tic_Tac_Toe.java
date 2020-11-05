@@ -9,17 +9,22 @@ public class Tic_Tac_Toe{
 			board[i]=' ';
 		}
 	}
-	
+	//Add : function for choose latter for user
 	static void ChooseLetter(){	
-		Scanner MyObj = new Scanner(System.in);		
-		System.out.println("Choose the latter X or O");
-		String UserLatter = MyObj.nextLine();
-		if (UserLatter.equals("X")){
-			String ComputerLatter="O";
+		Scanner MyObj = new Scanner(System.in);
+		while(true){
+			System.out.println("Choose the latter X or O");
+			String UserLatter = MyObj.nextLine();
+			if (UserLatter.equals("X")||UserLatter.equals("x")){
+				String ComputerLatter="O";
+				break;
+			}
+			else if(UserLatter.equals("O")||UserLatter.equals("o")){
+				String ComputerLatter="X";
+				break;
+			}
 		}
-		else{
-			String ComputerLatter="X";
-		}
+		
 	}
 	public static void main(String args[]){
 		EmptyBorad();
