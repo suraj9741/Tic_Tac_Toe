@@ -27,10 +27,24 @@ public class Tic_Tac_Toe{
 				System.out.println("Invalid Letter");
 			}
 		}
-		
 	}
+	static void GameBoard(){
+		char [][] gameBoard ={{' ','|',' ','|',' '},
+							  {'-','+','-','+','-'},
+							  {' ','|',' ','|',' '},
+							  {'-','+','-','+','-'},
+							  {' ','|',' ','|',' '}};
+		for (char[] row : gameBoard){
+			for (char column : row){
+				System.out.print(column);
+			}
+			System.out.println();
+		}
+	}
+	
 	public static void main(String args[]){
 		EmptyBorad();
 		ChooseLetter();
+		GameBoard();
 	}
 }
